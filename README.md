@@ -54,10 +54,14 @@ sudo service clamav-freshclam restart
 ```
 chmod 0755 /root/clam_scan.sh
 ```
-* Create a symbolic link so that the script runs daily:
+* Create a cron to run the script at the time you want:
 ```
-ln /root/clam_scan.sh /etc/cron.daily/clamscan
+crontab -e
 ```
+```
+00 03 * * * root /root/clam_scan.sh
+```
+
 * To verify that the script works correctly, run:
 ```
 /root/clam_scan.sh
