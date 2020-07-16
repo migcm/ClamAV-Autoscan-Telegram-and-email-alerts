@@ -14,9 +14,9 @@ sudo apt-get update && apt-get install clamav clamav-docs clamav-daemon clamav-f
 ```
 sudo apt-get install arc arj bzip2 cabextract lzop nomarch p7zip pax tnef unrar-free unzip zoo
 ```
-* Install the curl packages (to send notifications to Telegram) and cpulimit (so that the scan doesn't consume all the CPU):
+* Install the sendmail package (to send notifications by email), curl package (to send notifications to Telegram) and cpulimit (so that the scan doesn't consume all the CPU):
 ```
-sudo apt-get install curl cpulimit
+sudo apt-get install sendmail curl cpulimit
 ```
 
 ## ClamAV configuration
