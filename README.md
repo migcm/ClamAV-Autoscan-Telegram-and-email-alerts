@@ -59,7 +59,7 @@ chmod 0755 /root/clam_scan.sh
 crontab -e
 ```
 ```
-00 03 * * * root /root/clam_scan.sh
+00 03 * * * /root/clam_scan.sh
 ```
 
 * To verify that the script works correctly, run:
