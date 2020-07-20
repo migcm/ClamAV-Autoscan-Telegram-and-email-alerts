@@ -20,6 +20,13 @@ TELEGRAM_CHATID="xxxx"
 DIR_TO_SCAN="/";
 
 
+REQUIRED_PACKAGES='clamav clamav-docs clamav-daemon clamav-freshclam arc arj bzip2 cabextract lzop nomarch p7zip pax tnef unrar-free unzip zoo curl sendmail cpulimit'             
+if ! dpkg -s $REQUIRED_PACKAGES >/dev/null 2>&1; then
+        echo "Before running this script, install the following packages: $REQUIRED_PACKAGES"
+        exit 0
+fi
+
+
 for S in ${DIR_TO_SCAN}; do
  	DIRSIZE=$(du -sh "$S" 2>/dev/null | cut -f1);
 
